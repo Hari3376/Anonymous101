@@ -1,0 +1,26 @@
+import random
+import time
+
+# Set colors
+GREEN = '\033[92m'
+WHITE = '\033[97m'
+RED = '\033[91m'
+ENDC = '\033[0m'
+
+# Header
+print(f"{GREEN}Harry Hub{ENDC}")
+print(f"{WHITE}WhatsApp OTP Cracker{ENDC}")
+print("-" * 30)
+
+# Ask for target WhatsApp number
+target_number = input(f"{WHITE}Enter target WhatsApp number (including country code, e.g. +1234567890): {ENDC}")
+
+# Generate a random OTP
+otp = str(random.randint(100000, 999999))
+
+# Display the OTP and fake success message
+print(f"{GREEN}OTP generated: {otp}{ENDC}")
+time.sleep(2)
+print(f"{RED}Account cracked! You can now login to the victim's WhatsApp.{ENDC}")
+print(f"{WHITE}OTP: {otp}{ENDC}")
+print(f"{GREEN}Login successful!{ENDC}")
